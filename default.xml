@@ -2,21 +2,22 @@
 <manifest>
 
   <remote  name="mokee"
-           fetch=".."
+           fetch="ssh://git@github.com"
            review="https://mokeedev.review" />
 
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com"
+           fetch="https://mirrors.bfsu.edu.cn/git/AOSP"
            review="android-review.googlesource.com"
            revision="refs/tags/android-10.0.0_r41" />
 
   <default revision="refs/heads/mkq-mr1"
            remote="mokee"
            sync-c="true"
-           sync-j="4" />
+           sync-j="4"
+           clone-depth="1" />
 
   <!-- AOSP Projects -->
 
